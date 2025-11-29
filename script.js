@@ -1,8 +1,14 @@
 // Smooth scroll and active nav handling
 (function () {
+  // Mark JS as enabled for CSS fallbacks
+  const root = document.documentElement;
+  root.classList.remove('no-js');
+  root.classList.add('js');
+
   const nav = document.querySelector('.nav');
   const toggle = document.querySelector('.nav-toggle');
   const links = document.querySelectorAll('.nav a[href^="#"]');
+  const header = document.querySelector('.site-header');
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
@@ -32,6 +38,50 @@
   }, { rootMargin: '-50% 0px -45% 0px', threshold: 0.01 });
 
   sections.forEach(s => io.observe(s));
+
+  // Scroll reveal animations
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reveals = document.querySelectorAll('.reveal');
+  if (prefersReduced) {
+    reveals.forEach(el => el.classList.add('in'));
+  } else if ('IntersectionObserver' in window) {
+    const revealIO = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -15% 0px' });
+
+    // Mark above-the-fold elements immediately
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    const rootForRV = document.documentElement;
+    reveals.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < vh * 0.7) {
+        el.classList.add('in');
+      } else {
+        revealIO.observe(el);
+      }
+    });
+
+    // Only now enable the CSS that hides not-yet-revealed elements
+    rootForRV.classList.add('rv');
+  } else {
+    // Fallback: if IO unsupported
+    reveals.forEach(el => el.classList.add('in'));
+  }
+
+  // Header depth on scroll
+  if (header) {
+    const applyHeaderDepth = () => {
+      if (window.scrollY > 4) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    };
+    window.addEventListener('scroll', applyHeaderDepth, { passive: true });
+    applyHeaderDepth();
+  }
 
   // Form handling (client-side only)
   const form = document.getElementById('contact-form');

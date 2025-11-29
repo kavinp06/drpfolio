@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -62,10 +62,10 @@
 
   <main id="home" class="hero">
     <div class="container hero-grid">
-      <div class="hero-media">
+      <div class="hero-media reveal" style="--rv-delay: 60ms">
         <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=1200&auto=format&fit=crop" alt="Portrait of Dr. First Last" class="avatar" />
       </div>
-      <div class="hero-content">
+      <div class="hero-content reveal" style="--rv-delay: 140ms">
         <h1>Dr. First Last</h1>
         <p class="subtitle">MBBS, MD — Consultant Specialist</p>
         <ul class="badges" role="list">
@@ -83,7 +83,7 @@
 
   <section id="about" class="section">
     <div class="container cols">
-      <div>
+      <div class="reveal">
         <h2>About</h2>
         <p>
           Dr. First Last is a consultant specialist dedicated to evidence-based, ethical, and compassionate care. 
@@ -95,7 +95,7 @@
           <span class="chip">Fellowship (Intl.)</span>
         </div>
       </div>
-      <aside class="card info">
+      <aside class="card info reveal" style="--rv-delay: 100ms">
         <h3>Quick Info</h3>
         <ul>
           <li><strong>License:</strong> Reg-XXXXXX</li>
@@ -111,15 +111,15 @@
     <div class="container">
       <h2>Areas of Expertise</h2>
       <div class="cards three">
-        <article class="card">
+        <article class="card reveal">
           <h3>Condition / Procedure A</h3>
           <p>Diagnosis and management using the latest, evidence-based protocols.</p>
         </article>
-        <article class="card">
+        <article class="card reveal" style="--rv-delay: 80ms">
           <h3>Condition / Procedure B</h3>
           <p>Minimally-invasive approaches for faster recovery and improved outcomes.</p>
         </article>
-        <article class="card">
+        <article class="card reveal" style="--rv-delay: 160ms">
           <h3>Condition / Procedure C</h3>
           <p>Preventive strategies and lifestyle-guided care plans.</p>
         </article>
@@ -130,7 +130,7 @@
   <section id="experience" class="section">
     <div class="container">
       <h2>Experience</h2>
-      <ol class="timeline">
+      <ol class="timeline reveal">
         <li>
           <div class="time">2022 — Present</div>
           <div class="desc"><strong>Consultant Specialist</strong>, City Hospital</div>
@@ -151,17 +151,17 @@
     <div class="container">
       <h2>Services</h2>
       <div class="price-grid">
-        <article class="price card">
+        <article class="price card reveal">
           <h3>Consultation</h3>
           <p class="muted">30–40 minutes initial evaluation</p>
           <div class="rate">₹1,500</div>
         </article>
-        <article class="price card">
+        <article class="price card reveal" style="--rv-delay: 80ms">
           <h3>Follow-up</h3>
           <p class="muted">15–20 minutes review & plan</p>
           <div class="rate">₹900</div>
         </article>
-        <article class="price card">
+        <article class="price card reveal" style="--rv-delay: 160ms">
           <h3>Tele-Consult</h3>
           <p class="muted">Secure video consultation</p>
           <div class="rate">₹1,200</div>
@@ -173,7 +173,7 @@
 
   <section id="clinics" class="section">
     <div class="container cols">
-      <div>
+      <div class="reveal">
         <h2>Clinics & Timings</h2>
         <ul class="list">
           <li>
@@ -188,7 +188,7 @@
           </li>
         </ul>
       </div>
-      <aside class="map card">
+      <aside class="map card reveal" style="--rv-delay: 120ms">
         <iframe title="Clinic Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086801881904!2d-122.419415!3d37.774929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ2JzI5LjciTiAxMjLCsDI1JzA5LjkiVw!5e0!3m2!1sen!2sus!4v1610000000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </aside>
     </div>
@@ -197,7 +197,7 @@
   <section id="publications" class="section alt">
     <div class="container">
       <h2>Publications & Media</h2>
-      <ul class="list">
+      <ul class="list reveal">
         <li>Last F. Title of research article. <em>Journal Name</em>. 2024.</li>
         <li>Guest talk on Healthy Living — City FM Radio, 2023.</li>
         <li>Co-author, Clinical Practice Guidelines, 2022.</li>
@@ -209,15 +209,15 @@
     <div class="container">
       <h2>Patient Testimonials</h2>
       <div class="cards three">
-        <blockquote class="card quote">
+        <blockquote class="card quote reveal">
           <p>Dr. Last explained everything clearly and made me feel at ease.</p>
           <footer>— Patient A</footer>
         </blockquote>
-        <blockquote class="card quote">
+        <blockquote class="card quote reveal" style="--rv-delay: 80ms">
           <p>Professional, empathetic, and highly skilled. Strongly recommend.</p>
           <footer>— Patient B</footer>
         </blockquote>
-        <blockquote class="card quote">
+        <blockquote class="card quote reveal" style="--rv-delay: 160ms">
           <p>Great experience from booking to follow-up. Thank you!</p>
           <footer>— Patient C</footer>
         </blockquote>
@@ -227,7 +227,7 @@
 
   <section id="contact" class="section alt">
     <div class="container cols">
-      <div>
+      <div class="reveal">
         <h2>Contact</h2>
         <p class="muted">For appointments and inquiries, please submit the form or use the details below.</p>
         <form id="contact-form" class="card form" novalidate>
@@ -251,7 +251,7 @@
           <p id="form-status" class="small"></p>
         </form>
       </div>
-      <aside class="card info">
+      <aside class="card info reveal" style="--rv-delay: 120ms">
         <h3>Direct</h3>
         <ul>
           <li><strong>Email:</strong> doctor@example.com</li>
