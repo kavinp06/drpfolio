@@ -12,6 +12,31 @@
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
+  // Theme Switcher with Dropdown
+  const themes = ['premium', 'modern', 'classic', 'minimal'];
+
+  const savedTheme = localStorage.getItem('doctor-theme') || 'premium';
+
+  const themeStylesheet = document.getElementById('theme-stylesheet');
+  const themeSelect = document.getElementById('theme-select');
+
+  function setTheme(theme) {
+    if (!themes.includes(theme)) theme = 'premium';
+    themeStylesheet.href = `./style-${theme}.css`;
+    localStorage.setItem('doctor-theme', theme);
+    if (themeSelect) themeSelect.value = theme;
+  }
+
+  // Set initial theme
+  setTheme(savedTheme);
+
+  // Listen for theme changes
+  if (themeSelect) {
+    themeSelect.addEventListener('change', (e) => {
+      setTheme(e.target.value);
+    });
+  }
+
   // Mobile nav toggle
   if (toggle) {
     toggle.addEventListener('click', () => {

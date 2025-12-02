@@ -1,21 +1,27 @@
 <!doctype html>
 <html lang="en" class="no-js">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dr. First Last — Specialist Physician</title>
-  <meta name="description" content="Official profile of Dr. First Last. Qualifications, experience, specialties, clinic locations, publications, and appointment information." />
+  <meta name="description"
+    content="Official profile of Dr. First Last. Qualifications, experience, specialties, clinic locations, publications, and appointment information." />
   <meta name="author" content="Dr. First Last" />
   <meta property="og:title" content="Dr. First Last — Specialist Physician" />
-  <meta property="og:description" content="Qualifications, experience, specialties, clinic locations, publications, and appointment information." />
+  <meta property="og:description"
+    content="Qualifications, experience, specialties, clinic locations, publications, and appointment information." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://example.com" />
   <meta property="og:image" content="/assets/profile.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🩺</text></svg>">
-  <link rel="stylesheet" href="./styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🩺</text></svg>">
+  <link id="theme-stylesheet" rel="stylesheet" href="./style-premium.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,6 +47,7 @@
   }
   </script>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
@@ -51,10 +58,18 @@
         <a href="#about">About</a>
         <a href="#expertise">Expertise</a>
         <a href="#experience">Experience</a>
-        <a href="#services">Services</a>
         <a href="#clinics">Clinics</a>
         <a href="#publications">Publications</a>
         <a href="#testimonials">Testimonials</a>
+        <div class="theme-selector">
+          <label for="theme-select" class="theme-label">Theme:</label>
+          <select id="theme-select" class="theme-select" aria-label="Choose website theme">
+            <option value="premium">Premium</option>
+            <option value="modern">Modern</option>
+            <option value="classic">Classic</option>
+            <option value="minimal">Minimal</option>
+          </select>
+        </div>
         <a class="btn btn-primary small" href="#contact">Contact</a>
       </nav>
     </div>
@@ -63,7 +78,8 @@
   <main id="home" class="hero">
     <div class="container hero-grid">
       <div class="hero-media reveal" style="--rv-delay: 60ms">
-        <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=1200&auto=format&fit=crop" alt="Portrait of Dr. First Last" class="avatar" />
+        <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=1200&auto=format&fit=crop"
+          alt="Portrait of Dr. First Last" class="avatar" />
       </div>
       <div class="hero-content reveal" style="--rv-delay: 140ms">
         <h1>Dr. First Last</h1>
@@ -86,8 +102,9 @@
       <div class="reveal">
         <h2>About</h2>
         <p>
-          Dr. First Last is a consultant specialist dedicated to evidence-based, ethical, and compassionate care. 
-          With a focus on prevention and long-term wellness, Dr. Last partners with patients to create practical care plans tailored to their lifestyle.
+          Dr. First Last is a consultant specialist dedicated to evidence-based, ethical, and compassionate care.
+          With a focus on prevention and long-term wellness, Dr. Last partners with patients to create practical care
+          plans tailored to their lifestyle.
         </p>
         <div class="chips">
           <span class="chip">MBBS</span>
@@ -147,29 +164,7 @@
     </div>
   </section>
 
-  <section id="services" class="section alt">
-    <div class="container">
-      <h2>Services</h2>
-      <div class="price-grid">
-        <article class="price card reveal">
-          <h3>Consultation</h3>
-          <p class="muted">30–40 minutes initial evaluation</p>
-          <div class="rate">₹1,500</div>
-        </article>
-        <article class="price card reveal" style="--rv-delay: 80ms">
-          <h3>Follow-up</h3>
-          <p class="muted">15–20 minutes review & plan</p>
-          <div class="rate">₹900</div>
-        </article>
-        <article class="price card reveal" style="--rv-delay: 160ms">
-          <h3>Tele-Consult</h3>
-          <p class="muted">Secure video consultation</p>
-          <div class="rate">₹1,200</div>
-        </article>
-      </div>
-      <p class="muted small">Note: Fees are indicative and may vary by clinic/location.</p>
-    </div>
-  </section>
+
 
   <section id="clinics" class="section">
     <div class="container cols">
@@ -189,7 +184,9 @@
         </ul>
       </div>
       <aside class="map card reveal" style="--rv-delay: 120ms">
-        <iframe title="Clinic Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086801881904!2d-122.419415!3d37.774929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ2JzI5LjciTiAxMjLCsDI1JzA5LjkiVw!5e0!3m2!1sen!2sus!4v1610000000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe title="Clinic Map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086801881904!2d-122.419415!3d37.774929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ2JzI5LjciTiAxMjLCsDI1JzA5LjkiVw!5e0!3m2!1sen!2sus!4v1610000000000"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </aside>
     </div>
   </section>
@@ -271,7 +268,8 @@
     <div class="container footer-grid">
       <div>
         <div class="brand">Dr<span>.</span>First Last</div>
-        <p class="muted small">© <span id="year"></span> All rights reserved. This website does not provide medical advice; it is for informational purposes only.</p>
+        <p class="muted small">© <span id="year"></span> All rights reserved. This website does not provide medical
+          advice; it is for informational purposes only.</p>
       </div>
       <div class="footer-links">
         <a href="#privacy">Privacy</a>
@@ -282,4 +280,5 @@
 
   <script src="./script.js"></script>
 </body>
+
 </html>
